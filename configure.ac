@@ -285,8 +285,8 @@ $saved_error
 dnl double check ImageMagick install (bug #2582232)
    CPPFLAGS_save="$CPPFLAGS"
    CPPFLAGS="$CPPFLAGS $MAGICK_CFLAGS"
-   AC_CHECK_HEADER([wand/MagickWand.h], [],
-     [AC_MSG_FAILURE([ImageMagick package found but wand/MagickWand.h not installed?!
+   AC_CHECK_HEADER([MagickWand/MagickWand.h], [],
+     [AC_MSG_FAILURE([ImageMagick package found but MagickWand/MagickWand.h not installed?!
 this is a problem with your ImageMagick install,
 please resolve the inconsistency and try again...])])
    CPPFLAGS="$CPPFLAGS_save"])

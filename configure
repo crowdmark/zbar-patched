@@ -21735,6 +21735,7 @@ $as_echo "yes" >&6; }
 	:
 fi
    MAGICK_VERSION=`$PKG_CONFIG MagickWand --modversion`
+   MAGICK_CFLAGS="$MAGICK_CFLAGS -DMAGICK_MAJOR=${MAGICK_VERSION%%.*}"
    { $as_echo "$as_me:$LINENO: using ImageMagick version $MAGICK_VERSION" >&5
 $as_echo "$as_me: using ImageMagick version $MAGICK_VERSION" >&6;}
 
@@ -25344,7 +25345,8 @@ $debug ||
 if test -n "$CONFIG_FILES"; then
 
 
-ac_cr=''
+ac_cr='
+'
 ac_cs_awk_cr=`$AWK 'BEGIN { print "a\rb" }' </dev/null 2>/dev/null`
 if test "$ac_cs_awk_cr" = "a${ac_cr}b"; then
   ac_cs_awk_cr='\\r'
